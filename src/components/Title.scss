@@ -1,0 +1,31 @@
+.logo {
+  position: relative;
+
+  img.title {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: 55%;
+  }
+
+  img.smiley {
+    position: absolute;
+    left:58%;
+    top:23%;
+    width:12%;
+    height:12%;
+    border-radius: 50%;
+    box-shadow: -6px 8px #223547;
+    transform: rotate(0);
+  }
+
+  div.particles {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
