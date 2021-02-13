@@ -1,25 +1,29 @@
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Cookies from 'universal-cookie';
+
+import Menu from './pages/Menu';
+import Title from './pages/Title';
+import Settings from './pages/Settings';
+import Game from './pages/Game';
+
 import './App.scss';
-import Title from './components/Title'
+
+const cookies = new Cookies();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Title></Title>
-        <p className="App-tagline">
-          Try matching the WillowTree employee to their photo.
-        </p>
-        <button
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Play!
-        </button>
-      </header>
-    </div>
+    <Router>
+      <div className={ cookies.get('darkMode') ? 'App Dark' : 'App'}>
+        <Switch>
+          <Route path="/" exact component={Title}/>
+          <Route path="/menu" component={Menu}/>
+          <Route path="/settings" component={Settings}/>
+          <Route path="/play" component={Game}/>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
