@@ -1,2 +1,15 @@
 @import './variables.scss';
 
+body {
+  padding: 34px;
+  background-color: var(--color-page-background);
+  color: var(--color-text);
+  font: 400 24px Helvetica;
+  line-height: 32px;
+}
+
+.App {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}

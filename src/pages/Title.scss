@@ -1,0 +1,17 @@
+.Page-Title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--color-brand-dark);
+  color: white;
+}
+
+.Page-Title .Button {
+  background-color: var(--color-brand);
+}
+
+p {
+  margin: 72px;
+}

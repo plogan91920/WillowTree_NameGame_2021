@@ -1,0 +1,42 @@
+.Nav {
+  height: 104px;
+  
+  nav {
+    position: fixed;
+    z-index: 99;
+    top:0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-brand-dark);
+  }
+
+  .Logo {
+    height: 30px;
+    margin: 33px auto;
+  }
+
+  .Back {
+    position: absolute;
+    width: 104px;
+    height: 100%;
+
+    &:after {
+      content:"";
+      padding-top: 100%;
+    }
+    
+    img {
+      position: absolute;
+      left: 46px;
+      top: 50%;
+      transition: transform 0.2s;
+      transform: translateY(-50%);
+      height: 20.5px;
+      width: 12px;
+    }
+
+    &:hover img {
+      transform: translateY(-50%) scale(1.5);
+    }
+  }
+}

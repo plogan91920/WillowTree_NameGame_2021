@@ -1,10 +1,9 @@
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Cookies from 'universal-cookie';
 
-import Menu from './pages/Menu';
 import Title from './pages/Title';
-import Settings from './pages/Settings';
-import Game from './pages/Game';
+import Game from './Game';
+import NotFound from './pages/NotFound';
 
 import './App.scss';
 
@@ -16,9 +15,8 @@ function App() {
       <div className={ cookies.get('darkMode') ? 'App Dark' : 'App'}>
         <Switch>
           <Route path="/" exact component={Title}/>
-          <Route path="/menu" component={Menu}/>
-          <Route path="/settings" component={Settings}/>
-          <Route path="/play" component={Game}/>
+          <Route path="/" component={Game}/>
+          <Route component={NotFound}/>
         </Switch>
       </div>
     </Router>

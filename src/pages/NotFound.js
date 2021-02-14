@@ -1,8 +1,8 @@
-
 function Game() {
   return (
     <div className="App">
-      <h1>Game Page</h1>
+      <h1>Oh No!</h1>
+      <h2>This page doesn't exist!</h2>
     </div>
   );
 }

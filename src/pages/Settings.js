@@ -1,14 +1,11 @@
-import Cookies from 'universal-cookie';
-
-const cookies = new Cookies();
+import Setting from "../components/Setting.js";
 
 function Settings() {
-  cookies.set('darkMode', true);
-
   return (
-    <div className="App">
-      <h1>Settings Page</h1>
-      {console.log(cookies.get('darkMode'))}
+    <div className="Page Settings">
+      <h1>Settings</h1>
+      <Setting name="assist_mode">Assist Mode</Setting>
+      <Setting name="dark_mode">Dark Mode</Setting>
     </div>
   );
 }

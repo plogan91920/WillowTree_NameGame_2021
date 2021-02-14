@@ -1,0 +1,24 @@
+.Button {
+  display: block;
+  margin: 25px auto;
+  border-radius: 14px;
+  width: 359px;
+  padding: 17px;
+  background-color: var(--color-primary);
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none !important;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 0 2px #0000;
+
+  &.Secondary {
+    background-color: var(--color-secondary);
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px #000a;
+  }
+}

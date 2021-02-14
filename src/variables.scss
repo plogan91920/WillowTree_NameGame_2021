@@ -1,8 +1,12 @@
+//Brand Colors
+$color-brand-dark: #223547;
+$color-brand: #15659D;
+
 //Light Theme Colors
 $color-light-background: white;
 $color-light-text: black;
-$color-light-primary: #75CBC4;
-$color-light-secondary: #338A97;
+$color-light-primary: #15659D;
+$color-light-secondary: #2B4C68;
 
 //Dark Theme Colors
 $color-dark-background: #223547;
@@ -11,15 +15,17 @@ $color-dark-primary: #15659D;
 $color-dark-secondary: #2B4C68;
 
 :root {
-  --color-page-background: #{$color-dark-background};
-  --color-text: #{$color-dark-text};
-  --color-primary: #{$color-dark-primary};
-  --color-secondary: #{$color-dark-secondary};
-}
-
-.light {
+  --color-brand: #{$color-brand};
+  --color-brand-dark: #{$color-brand-dark};
   --color-page-background: #{$color-light-background};
   --color-text: #{$color-light-text};
   --color-primary: #{$color-light-primary};
   --color-secondary: #{$color-light-secondary};
+}
+
+.Dark {
+  --color-page-background: #{$color-dark-background};
+  --color-text: #{$color-dark-text};
+  --color-primary: #{$color-dark-primary};
+  --color-secondary: #{$color-dark-secondary};
 }

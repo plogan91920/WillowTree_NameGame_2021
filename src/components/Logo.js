@@ -7,7 +7,7 @@ import './Logo.scss';
 
 const Logo = () => {
   return (
-    <div class="logo">
+    <div className="Logo">
       <img className="bullseye" src={bullseye} />
       <img className="title" src={title} />
       <div className="particles">

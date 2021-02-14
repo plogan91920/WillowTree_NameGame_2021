@@ -1,0 +1,39 @@
+.Setting {
+  cursor: pointer;
+  
+  .Checkbox {
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius:3px;
+    border: 1px solid black;
+    margin:0 0.5em;
+  
+    .Check {
+      position: absolute;
+      left: -5px;
+      top: -5px;
+      bottom: -5px;
+      width: 0px;
+      overflow: hidden;
+      transition: width 0.15s;
+  
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
+
+    &.Checked .Check {
+      width: calc(100% + 10px);
+    }
+  }
+
+  &:hover .Checkbox {
+    background-color: gray;
+  }
+}
