@@ -6,12 +6,12 @@
   bottom: 0;
   background-color: var(--color-brand-dark);
   color: white;
-}
 
-.Page-Title .Button {
-  background-color: var(--color-brand);
-}
-
-p {
-  margin: 72px;
+  .Button {
+    background-color: var(--color-brand);
+  }
+  
+  p {
+    margin: 72px;
+  }
 }

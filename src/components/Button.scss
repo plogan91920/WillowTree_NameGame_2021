@@ -13,11 +13,15 @@
   transition: transform 0.25s, box-shadow 0.25s;
   box-shadow: 0 0 2px #0000;
 
+  &.Disabled {
+    background-color: rgba(21, 101, 157, 0.2);
+  }
+
   &.Secondary {
     background-color: var(--color-secondary);
   }
 
-  &:hover {
+  &:not(.Disabled):hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 10px #000a;
   }

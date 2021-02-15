@@ -1,6 +1,6 @@
 import { useHistory } from "react-router-dom";
 
-import chevron_left from '../assets/icons/chevron_left.svg';
+import { FaChevronLeft } from 'react-icons/fa';
 import title_long from '../assets/images/title_long.svg';
 
 import "./Nav.scss";
@@ -10,9 +10,9 @@ function Nav() {
   return (
     <div className="Nav">
       <nav>
-        <div className="Back" onClick={() => history.goBack()}>
-          <img src={chevron_left} />
-        </div>
+        <button tabIndex="0" role="button" className="Back" onClick={() => history.goBack()}>
+          <FaChevronLeft />
+        </button>
         <img className="Logo" src={title_long} />
       </nav>
     </div>

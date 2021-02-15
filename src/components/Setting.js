@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Cookies from 'universal-cookie';
 
-import check from '../assets/icons/check.svg';
+import { FaCheck } from 'react-icons/fa';
 
 import './Setting.scss';
 
@@ -18,7 +18,7 @@ const Setting = ({name, children}) => {
 
   return (
     <div className="Setting" onClick={toggle}>
-      <span className={"Checkbox" + (checked ? " Checked" : "")}><div className="Check"><img src={check}/></div></span>{children}
+      <span className={"Checkbox" + (checked ? " Checked" : "")}><div className="Check"><FaCheck /></div></span>{children}
     </div>
   )
 }

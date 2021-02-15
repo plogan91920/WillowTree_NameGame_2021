@@ -1,0 +1,71 @@
+.EmployeePortrait {
+  --result-fade-time: 0.5s;
+
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .Portrait {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: opacity var(--result-fade-time);
+  }
+
+  &.Disabled .Portrait {
+    opacity: 0.5;
+  }
+
+  .Evaluation {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    animation: fadein var(--result-fade-time) linear;
+    animation-fill-mode: backwards;
+
+    &.Correct {
+      background-color: rgba(52, 199, 89, 0.6);
+    }
+    &.Incorrect {
+      background-color: rgba(255, 59, 48, 0.6);
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 120px;
+      height: 120px;
+      transform: translate(-50%,-50%) scale(1);
+      animation-fill-mode: both;
+      animation: popin var(--result-fade-time) ease-in-out;
+    }
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes popin {
+  0% {
+    transform: translate(-50%,-50%) scale(0);
+  }
+  60% {
+    transform: translate(-50%,-50%) scale(1.5);
+  }
+  100% {
+    transform: translate(-50%,-50%) scale(1);
+  }
+}
