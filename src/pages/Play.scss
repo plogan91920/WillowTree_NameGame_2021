@@ -62,9 +62,11 @@
       }
 
       p {
-        width: 300px;
+        width: 250px;
         position: absolute;
+        left: 50%;
         bottom: 18px;
+        transform: translateX(-50%);
         color: white;
         text-align: center;
       }

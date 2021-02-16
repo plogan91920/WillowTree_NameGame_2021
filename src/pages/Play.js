@@ -15,7 +15,6 @@ import './Play.scss'
 // Play Page
 // =========
 export class Play extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -26,7 +25,7 @@ export class Play extends Component {
         timeTaken: 0
       },
       answer: null,
-      complete: false
+      complete: false,
     };
     this.employees = []
     this.questions = []
@@ -199,7 +198,7 @@ export class Play extends Component {
 
           </div>
           <div className="Return">
-            <Button action="/menu" text="Return to Home" />
+            <Button action='/menu' text="Return to Home" />
           </div>
         </div>
       )
