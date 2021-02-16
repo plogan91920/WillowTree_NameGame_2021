@@ -34,13 +34,13 @@ export class API {
 
     scores.push({time: averageTime, correct: correctAnswers})
 
+    //Sort best to worst and keep only the top 10 scores
     scores.sort((score1, score2) => {
       if (score1.correct == score2.correct)
         return score1.time - score2.time
 
       return score2.correct - score1.correct
     })
-
     scores = scores.slice(0,10)
 
     cookies.set('high_scores', JSON.stringify(scores))
