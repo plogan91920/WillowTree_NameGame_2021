@@ -52,6 +52,7 @@ export class Play extends Component {
     this.employees = willowtreeEmployees
     
     this.getQuestions()
+    this.setState({loading: false})
   }
 
   fetchEmployees = async () => {
@@ -160,6 +161,14 @@ export class Play extends Component {
   }
 
   render() {
+    if (this.state.loading) {
+      return (
+        <div className="Page-Play">
+          <LoadingBar />
+        </div>
+      )
+    }
+
     if (!this.state.complete) {
 
       //Trim Name

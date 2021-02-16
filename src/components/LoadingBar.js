@@ -4,7 +4,7 @@ import './LoadingBar.scss'
 
 const LoadingBar = ({loading}) => {
   return (
-    <div className={loading ? "LoadingBar Loading" : "LoadingBar"} />
+    <div className="LoadingBar" />
   )
 }
 
