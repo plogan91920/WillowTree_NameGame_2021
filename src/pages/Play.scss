@@ -1,6 +1,12 @@
 @import '../mixins.scss';
+
+// ===== Game Styles =====
 .Page-Play {
   padding: 10px;
+
+  @include mobile-only {
+    font-size: 28px;
+  }
 
   .LoadingBar {
     position: absolute;
@@ -17,14 +23,13 @@
     }
   }
 
-  @include mobile-only {
-    font-size: 28px;
-  }
-
   .Portraits {
-    margin: auto;
-    width: 95vw;
+    //Display
     display: flex;
+    width: 95vw;
+    margin: auto;
+
+    //Flex
     align-items: center;
     justify-content: center;
     flex-direction: row;
@@ -48,6 +53,7 @@
   }
 }
 
+// ===== Score Styles =====
 .Page-Score {
   .TopHalf {
     background-color: var(--color-secondary);
@@ -60,10 +66,10 @@
     }
 
     .Report {
-      margin: auto;
       position: relative;
       width: 320px;
       height: 320px;
+      margin: auto;
 
       .Smiley {
         position: absolute;
@@ -73,12 +79,17 @@
       }
 
       p {
-        width: 250px;
+        //Display
         position: absolute;
         left: 50%;
         bottom: 18px;
+        width: 250px;
         transform: translateX(-50%);
+
+        //Visual
         color: white;
+
+        //Font
         text-align: center;
 
         @include laptop-up {
@@ -89,15 +100,15 @@
   }
 
   .Scoring {
-    margin: auto;
     width: 300px;
+    margin: auto;
 
     @include laptop-up {
       position: absolute;
       left: 50%;
       top: 60%;
-      transform: translateX(-50%);
       width: 100vw;
+      transform: translateX(-50%);
       flex: auto;
     }
 

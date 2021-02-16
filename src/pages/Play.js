@@ -1,15 +1,15 @@
 // Functional
-import React, { Component } from 'react'
-import Cookies from 'universal-cookie'
 import API from '../helpers/Api.js'
+import Cookies from 'universal-cookie'
+import React, { Component } from 'react'
 import Settings from '../config.json'
 
 // Components
-import { Prompt } from 'react-router-dom'
-import LoadingBar from '../components/LoadingBar.js'
 import Button from '../components/Button.js'
 import ImageButton from '../components/ImageButton.js'
+import LoadingBar from '../components/LoadingBar.js'
 import Particle from '../components/Particle.js'
+import { Prompt } from 'react-router-dom'
 
 //Resources
 import smiley from '../assets/images/smiley.svg'

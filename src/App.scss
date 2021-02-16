@@ -16,14 +16,19 @@ body {
 }
 
 .App {
+  //Display
   position: absolute;
   left: 0;
-  width: 100vw;
   top: 0;
+  width: 100vw;
   min-height: 100vh;
-  background-color: var(--color-page-background);
-  color: var(--color-text);
   margin: auto;
+
+  //Visual
+  background-color: var(--color-page-background);
+
+  //Font
+  color: var(--color-text);
   text-align: center;
 }
 

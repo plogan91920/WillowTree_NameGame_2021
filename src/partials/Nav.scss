@@ -1,4 +1,5 @@
 @import '../mixins.scss';
+
 .Nav {
   height: 54px;
 
@@ -7,11 +8,14 @@
   }
   
   nav {
+    //Display
     position: fixed;
     z-index: 99;
     top:0;
     left: 0;
     right: 0;
+
+    //Visual
     background-color: var(--color-secondary);
   }
 
@@ -26,12 +30,17 @@
   }
 
   button {
-    background-color: transparent;
-    border: none;
+    //Display
     display: block;
     position: absolute;
     width: 60px;
     height: 100%;
+
+    //Visual
+    background-color: transparent;
+    border: none;
+
+    //Font
     font-size: 1.5em;
     line-height: 0;
     color: white;

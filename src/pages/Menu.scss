@@ -1,22 +1,19 @@
 @import '../mixins.scss';
 .Page-Menu {
   .Menu {
+    //Display
     position: absolute;
     left: 50%;
-    top: 0;
     top: 50%;
     transform: translate(-50%, -50%);
 
-    hr {
-      max-width: 250px;
-      color: var(--color-text);
-    }
-
+    //All menu items for animation
     * {
       display: block;
+
+      //Animation
       animation: fadein 0.35s;
       animation-fill-mode: backwards;
-
       @for $i from 1 through 4 {
         &:nth-child(#{$i}) {
           animation-delay: $i * 0.1s;
@@ -29,11 +26,13 @@
 @keyframes fadein {
   0% {
     display: inline-block;
-    opacity: 0;
     transform: translateY(20px);
+
+    opacity: 0;
   }
   100% {
-    opacity: 1;
     transform: translateY(0px);
+
+    opacity: 1;
   }
 }

@@ -1,18 +1,24 @@
 .Setting {
-  cursor: pointer;
+  //Display
   margin: 25px;
+
+  //Visual
+  cursor: pointer;
   
   .Checkbox {
+    //Display
     position: relative;
     display: inline-block;
     width: 1em;
     height: 1em;
+    margin:0 0.5em;
+
+    //Visual
     border-radius:3px;
     border: 1px solid var(--color-text);
-    margin:0 0.5em;
   
     .Check {
-      font-size: 1.5em;
+      //Display
       position: absolute;
       left: -5px;
       top: -5px;
@@ -20,6 +26,9 @@
       width: 0px;
       overflow: hidden;
       transition: width 0.15s;
+
+      //Font
+      font-size: 1.5em;
     }
 
     &.Checked .Check {

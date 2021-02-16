@@ -1,6 +1,7 @@
 @import '../mixins.scss';
 
 .Logo {
+  //Display
   display: inline-block;
   position: relative;
   max-width: 462px;
@@ -24,15 +25,17 @@
   }
 
   img.title {
+    //Display
     position: absolute;
     left:50%;
     top:50%;
-    transform: translate(-50%, -50%);
     width: 55%;
     height: 55%;
+    transform: translate(-50%, -50%);
   }
 
   div.particles {
+    //Display
     position: absolute;
     left: 0;
     top: 0;

@@ -1,7 +1,10 @@
 .particle {
-  width: 4%;
+  //Display
   position: absolute;
+  width: 4%;
   transform: translate(-50%, -50%) rotate(0);
+
+  //Animation
   animation: 8s linear infinite spin;
 
   &.reverse {

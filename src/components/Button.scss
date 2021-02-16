@@ -1,34 +1,42 @@
 @import '../mixins.scss';
 
 .Button {
+  //Display
   display: block;
-  margin: 15px auto;
-  border-radius: 14px;
   width: 250px;
-  @include laptop-up {
-    width: 320px;
-    margin: 25px auto;
-  }
+  margin: 15px auto;
   padding: 17px;
+
+  //Visual
   background-color: var(--color-primary);
+  border-radius: 14px;
+  box-shadow: 0 0 2px #0000;
+
+  //Font
   font-size: 17px;
   line-height: 22px;
   font-weight: 700;
   color: white;
   text-decoration: none !important;
+
+  //Animation
   transition: transform 0.25s, box-shadow 0.25s;
-  box-shadow: 0 0 2px #0000;
+
+  @include laptop-up {
+    width: 320px;
+    margin: 25px auto;
+  }
 
   &.Disabled {
     background-color: rgba(21, 101, 157, 0.2);
   }
 
-  &.Secondary {
-    background-color: var(--color-secondary);
-  }
-
   &:not(.Disabled):hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 10px #000a;
+  }
+
+  &.Secondary {
+    background-color: var(--color-secondary);
   }
 }

@@ -1,18 +1,24 @@
 .LoadingBar {
+  //Display
   position: relative;
   height: 30px;
   width: 200px;
+  overflow: hidden;
+
+  //Visual
   border: 1px solid black;
   border-radius: 14px;
   background-color: var(--color-primary);
-  overflow: hidden;
 
   &:after {
+    //Display
     content: "";
     position: absolute;
     background-color: var(--color-secondary);
     height: 100%;
     width: 100%;
+
+    //Animation
     animation: load linear 4s infinite;
   }
 }
