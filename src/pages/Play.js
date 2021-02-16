@@ -70,18 +70,20 @@ export class Play extends Component {
     this.employees = this.shuffleArray(this.employees)
     this.questions = []
 
+    //Group employees in
     for (var q = 0; q < Math.min(Math.floor(this.employees.length / 6), Settings.game.questions); q++) {
+      //Get the next 6 employees, pick one as the answer
       var options = this.employees.slice(q*6,q*6 + 6)
       var answer = options[Math.floor(Math.random() * 6)]
+
+      //Setup question object with answer and formatted employee options
       var question = {
         answer: answer,
-        options: []
-      }
-      options.map((option) => {
-        question.options.push({
-          employee: option
+        options: options.map((employee) => {
+          return { employee: employee }
         })
-      })
+      }
+
       this.questions.push(question)
     }
 
