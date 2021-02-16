@@ -205,6 +205,22 @@ export class Play extends Component {
       averageTime /= this.questionLimit
       averageTime = Math.floor(averageTime / 100) / 10
 
+      //Save Scores
+      let scores = cookies.get('high_scores')
+
+      if (!scores)
+        scores = [];
+
+      scores.push({time: averageTime, correctAnswers: this.correctAnswers})
+      scores.sort((score1, score2) => {
+        if (score1.correctAnswers == score2.correctAnswers)
+          return score1.time - score2.time
+
+        return score2.correctAnswers - score1.correctAnswers
+      })
+      scores = scores.slice(0,10)
+      cookies.set('high_scores', JSON.stringify(scores))
+
       //Render Page
       return (
         <div className="Page-Score">

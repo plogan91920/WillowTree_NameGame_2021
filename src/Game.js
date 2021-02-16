@@ -22,6 +22,7 @@ function Game() {
           <Route path="/menu" component={Menu}/>
           <Route path="/play" exact component={Play}/>
           <Route path="/play/:mode" component={Play}/>
+          <Route path="/scores" component={Scores}/>
           <Route path="/settings" component={Settings}/>
           <Route component={NotFound}/>
         </Switch>
