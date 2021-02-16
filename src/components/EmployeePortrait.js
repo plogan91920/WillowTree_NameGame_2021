@@ -12,6 +12,7 @@ import './EmployeePortrait.scss'
 // ===========================
 const EmployeePortrait = ({image, result, onClick}) => {
   const [img, setImg] = useState("https://namegame.willowtreeapps.com/" + (image ? image : "WT_Logo-Hye-tTeI0Z.png"))
+  const [loaded, setLoaded] = useState(false)
 
   //Display a result
   var evaluation
@@ -28,7 +29,8 @@ const EmployeePortrait = ({image, result, onClick}) => {
   //Render
   return (
     <div className={classList} onClick={() => {if (!result) onClick();}}>
-      <div className="Portrait" style={{backgroundImage:"url('" + img + "')"}} />
+      <div className={"Portrait" + (loaded ? " Loaded" : "")} style={{backgroundImage:"url('" + img + "')"}} />
+      <img src={img} onLoad={() => {setLoaded(true)}}/>
       {evaluation}
     </div>
   )

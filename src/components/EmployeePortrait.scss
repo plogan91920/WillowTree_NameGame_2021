@@ -1,4 +1,5 @@
 @import '../mixins.scss';
+
 .EmployeePortrait {
   --result-fade-time: 0.5s;
 
@@ -7,6 +8,10 @@
   height: 35vmin;
   margin: 5px;
   overflow: hidden;
+
+  img {
+    visibility: hidden;
+  }
 
   @include tablet-only {
     width: 164px;
@@ -29,11 +34,29 @@
   }
 
   .Portrait {
+    position: relative;
     width: 100%;
     height: 100%;
     background-position: center;
     background-size: cover;
     transition: opacity var(--result-fade-time);
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid gray;
+      background-color: white;
+      //animation: loading 1s infinite;
+      transition: opacity 0.5s;
+    }
+
+    &.Loaded:after {
+      opacity: 0;
+    }
   }
 
   &.Disabled .Portrait {
@@ -87,5 +110,17 @@
   }
   100% {
     transform: translate(-50%,-50%) scale(1);
+  }
+}
+
+@keyframes loading {
+  0% {
+    background: white;
+  }
+  50% {
+    background: rgb(128, 128, 128);
+  }
+  100% {
+    background: white;
   }
 }
