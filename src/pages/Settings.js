@@ -1,7 +1,7 @@
-//Functional Includes
+//Components
 import Setting from "../components/Setting.js";
 
-//Resource Includes
+//Resources
 import './Settings.scss';
 
 // =============

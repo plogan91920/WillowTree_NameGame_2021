@@ -1,7 +1,8 @@
-//Functional Includes
-import { useState } from 'react'
-import {Switch, Route} from 'react-router-dom';
+//Functional
 import Cookies from 'universal-cookie';
+
+//Components
+import {Switch, Route} from 'react-router-dom';
 import Title from './pages/Title';
 import Game from './Game';
 import NotFound from './pages/NotFound';

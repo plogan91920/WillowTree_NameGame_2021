@@ -1,7 +1,7 @@
-//Functional Includes
+//Components
 import Button from "../components/Button.js";
 
-//Resource Includes
+//Resources
 import "./Menu.scss";
 
 // =========

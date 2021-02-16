@@ -1,8 +1,9 @@
+//Functional
 import { useHistory } from "react-router-dom";
 
+//Resources
 import { FaChevronLeft } from 'react-icons/fa';
 import title_long from '../assets/images/title_long.svg';
-
 import "./Nav.scss";
 
 function Nav() {

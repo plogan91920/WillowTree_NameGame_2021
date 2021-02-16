@@ -1,8 +1,8 @@
-//Functional Includes
+//Functional
 import { createBrowserHistory } from "history";
 import PropTypes from 'prop-types'
 
-//Resource Includes
+//Resources
 import './Button.scss';
 
 const history = createBrowserHistory({forceRefresh: true});

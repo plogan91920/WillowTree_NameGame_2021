@@ -1,7 +1,7 @@
-//Functional Includes
+//Functional
 import Particle from './Particle.js';
 
-//Resource Includes
+//Resources
 import bullseye from '../assets/images/bullseye.svg';
 import title from '../assets/images/title.svg';
 import './Logo.scss';

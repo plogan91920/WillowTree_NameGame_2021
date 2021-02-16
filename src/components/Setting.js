@@ -1,8 +1,8 @@
-//Functional Includes
+//Functional
 import { useState } from 'react';
 import Cookies from 'universal-cookie';
 
-//Resource Includes
+//Resources
 import { FaCheck } from 'react-icons/fa';
 import './Setting.scss';
 

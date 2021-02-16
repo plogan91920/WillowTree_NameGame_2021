@@ -1,7 +1,7 @@
-//Functional Includes
+//Functional
 import PropTypes from 'prop-types'
 
-//Resource Includes
+//Resources
 import star from '../assets/images/star.svg';
 import square from '../assets/images/square.svg';
 import triangle from '../assets/images/triangle.svg';

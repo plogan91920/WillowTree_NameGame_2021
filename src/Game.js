@@ -1,13 +1,15 @@
-// Functional Includes
+// Functional
+import Settings from './pages/Settings';
+
+// Components
 import {Switch, Route} from 'react-router-dom';
 import Nav from "./partials/Nav.js";
 import Menu from './pages/Menu';
 import Play from './pages/Play';
 import Scores from './pages/Scores';
-import Settings from './pages/Settings';
 import NotFound from './pages/NotFound';
 
-//Resource Includes
+//Resources
 import './Game.scss';
 
 // ===========

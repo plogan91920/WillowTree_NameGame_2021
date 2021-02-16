@@ -1,8 +1,8 @@
-//Functional Includes
+//Components
 import Button from '../components/Button.js'
 import Logo from '../components/Logo.js'
 
-//Resource Includes
+//Resources
 import './Title.scss';
 
 // ==========

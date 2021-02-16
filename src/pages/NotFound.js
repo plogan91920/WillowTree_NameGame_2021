@@ -1,4 +1,4 @@
-//Resource Includes
+//Resources
 import {FaExclamationTriangle} from 'react-icons/fa';
 import './NotFound.scss';
 

@@ -1,8 +1,8 @@
-//Functional includes
+//Functional
 import { useState } from 'react';
 import PropTypes from 'prop-types'
 
-//Resource includes
+//Resources
 import badgeCorrect from '../assets/icons/correct.svg'
 import badgeIncorrect from '../assets/icons/incorrect.svg'
 import './ImageButton.scss'

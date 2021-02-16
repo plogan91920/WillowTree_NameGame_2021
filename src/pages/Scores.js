@@ -33,7 +33,7 @@ function Scores() {
       </div>
     )
   else
-  scoreList = <LoadingBar />
+    scoreList = <LoadingBar />
   
   return (
     <div className="Page-Scores">
