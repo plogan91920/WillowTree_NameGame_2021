@@ -1,19 +1,17 @@
 @import '../mixins.scss';
 .Page-Play {
+  padding: 10px;
+
   p {
-    margin: 5px;
+    margin: 20px;
     
     @include mobile-only {
       display: none;
     }
   }
-  .Name {
-    @include mobile-only {
-      margin: 8px auto;
-    }
-  }
+
   .Portraits {
-    margin: 10px auto;
+    margin: auto;
     width: 95vw;
     display: flex;
     align-items: center;
@@ -21,29 +19,35 @@
     flex-direction: row;
     flex-wrap: wrap;
 
+    @include tablet-up {
+      margin: 20px auto;
+    }
+
     @include tablet-only {
       width: 350px;
     }
     
     @include laptop-only {
-      width: 630px;
+      width: 88vw;
+    }
+
+    @include desktop-only {
+      width: 1000px;
     }
   }
 }
 
 .Page-Score {
-  &:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 50%;
-    background-color: var(--color-primary);
-  }
-
   .TopHalf {
+    background-color: var(--color-secondary);
+
+    @include laptop-up {
+      position: absolute;
+      left: 0;
+      width: 100vw;
+      height: calc(50% - 108px);
+    }
+
     .Report {
       margin: auto;
       position: relative;
@@ -58,6 +62,7 @@
       }
 
       p {
+        width: 300px;
         position: absolute;
         bottom: 18px;
         color: white;
@@ -67,15 +72,21 @@
   }
 
   .Scoring {
-    position: absolute;
-    left: 50%;
-    top: 60vh;
-    transform: translateX(-50%);
-    width: 100vw;
+    margin: auto;
+    width: 300px;
+
+    @include laptop-up {
+      position: absolute;
+      left: 50%;
+      top: 60%;
+      transform: translateX(-50%);
+      width: 100vw;
+      flex: auto;
+    }
 
     .Category {
       display: inline-block;
-      margin: 30px;
+      margin: 2vw;
 
       .Value {
         margin: 16px;
@@ -84,9 +95,13 @@
   }
 
   .Return {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%)
+    padding: 5px;
+
+    @include laptop-up {
+      position: absolute;
+      top: calc(50% - 4px);
+      left: 50%;
+      transform: translate(-50%,-50%)
+    }
   }
 }

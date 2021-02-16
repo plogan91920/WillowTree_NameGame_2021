@@ -1,2 +1,10 @@
+@import './mixins.scss';
 .Page {
+    max-width: 100vmin;
+    min-height: calc(100vh - 54px);
+    margin: auto;
+
+    @include tablet-up {
+        min-height: calc(100vh - 108px);
+    }
 }

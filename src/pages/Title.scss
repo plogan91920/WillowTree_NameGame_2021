@@ -1,22 +1,24 @@
 @import '../mixins.scss';
 .Page-Title {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  min-height: 100%;
   background-color: var(--color-brand-dark);
   color: white;
+
+  .Logo {
+    margin: 5vmin;
+    width: 50vh;
+    max-width: 85vw;
+  }
 
   .Button {
     background-color: var(--color-brand);
   }
   
   p {
-    margin: 72px auto;
+    margin: 8vh auto;
     width: 216px;
 
-    @include tablet-up {
+    @include laptop-up {
       width:320px;
     }
   }

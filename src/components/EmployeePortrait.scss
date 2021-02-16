@@ -3,21 +3,29 @@
   --result-fade-time: 0.5s;
 
   position: relative;
-  width: 35vw;
-  height: 35vw;
+  width: 35vmin;
+  height: 35vmin;
   margin: 5px;
   overflow: hidden;
 
-  @include tablet-up {
-    width: 30vw;
-    height: 30vw;
+  @include tablet-only {
+    width: 164px;
+    height: 164px;
+  }
+
+  @include laptop-up {
+    margin: 15px;
   }
 
   @include laptop-only {
-    width: 180px;
-    height: 180px;
-    margin: 15px;
+    width: 200px;
+    height: 200px;
     border-radius: 4px;
+  }
+
+  @include desktop-only {
+    width: 250px;
+    height: 250px;
   }
 
   .Portrait {
@@ -52,8 +60,8 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      width: 120px;
-      height: 120px;
+      width: 50%;
+      height: 50%;
       transform: translate(-50%,-50%) scale(1);
       animation-fill-mode: both;
       animation: popin var(--result-fade-time) ease-in-out;

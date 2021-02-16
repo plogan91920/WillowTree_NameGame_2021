@@ -179,11 +179,6 @@ export class Play extends Component {
               <img className="Smiley" src={smiley} />
               <p className="text-big">Congratulations, you scored {this.correctAnswers}/{this.questionLimit}!</p>
             </div>
-
-            <div className="Return">
-              <Button action="/menu" text="Return to Home" />
-            </div>
-
           </div>
           <div className="Scoring">
 
@@ -202,6 +197,9 @@ export class Play extends Component {
               <label>Avg Selection Time</label>
             </div>
 
+          </div>
+          <div className="Return">
+            <Button action="/menu" text="Return to Home" />
           </div>
         </div>
       )
