@@ -11,6 +11,8 @@ import Particle from '../components/Particle.js'
 import smiley from '../assets/images/smiley.svg'
 import './Play.scss'
 
+const cookies = new Cookies();
+
 // =========
 // Play Page
 // =========
@@ -33,6 +35,9 @@ export class Play extends Component {
     this.correctAnswers = 0
     this.startTime = 0
     this.questionLimit = 5
+    this.assistMode = cookies.get('assist_mode') == "true"
+    this.assistStartDelay = 10
+    this.assistRevealDelay = 2
     
     if (this.props.match.params.mode)
       this.practiceMode = this.props.match.params.mode.toLowerCase() == "practice"
@@ -84,12 +89,14 @@ export class Play extends Component {
       this.questions.push(question)
     }
 
-    this.currentQ = 0
-    this.startTime = Date.now()
-    this.setState({question: this.questions[this.currentQ]})
+    this.currentQ = -1
+    this.nextQuestion()
   }
 
   resolveAnswer = (id) => {
+    if (this.assistTimer)
+      clearInterval(this.assistTimer)
+
     //Gather Data
     if (!this.practiceMode) {
       this.questions[this.currentQ].timeTaken = Date.now() - this.startTime
@@ -119,6 +126,11 @@ export class Play extends Component {
 
     if (this.currentQ < this.questions.length) {
       this.startTime = Date.now()
+
+      if (this.assistMode) {
+        this.assistTimer = setTimeout(this.assistPlayer, this.assistStartDelay * 1000)
+      }
+
       this.setState({question: this.questions[this.currentQ]})
       return
     }
@@ -127,6 +139,24 @@ export class Play extends Component {
       this.getQuestions()
     else
       this.setState({complete: true})
+  }
+
+  assistPlayer = () => {
+    let toReveal = []
+    this.state.question.options.map((option) => {
+      if (option.employee.id != this.state.question.answer.id && !option.answer)
+        toReveal.push(option)
+    })
+
+    toReveal[Math.floor(Math.random() * toReveal.length)].answer = "Disabled"
+
+    if (toReveal.length <= 1) {
+      this.resolveAnswer("TooLate")
+      return
+    }
+
+    this.assistTimer = setTimeout(this.assistPlayer, this.assistRevealDelay * 1000)
+    this.setState({question: this.state.question})
   }
 
   render() {
@@ -139,7 +169,6 @@ export class Play extends Component {
         let lastName = this.state.question.answer.lastName.match('([a-zA-Z\-." "`\']*)')[0];
         name = firstName + " " + lastName;
         name.replace("[' ']*", " ").trim();
-        console.log(name);
       }
 
       // ==================
