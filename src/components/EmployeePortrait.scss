@@ -9,7 +9,7 @@
   margin: 5px;
   overflow: hidden;
 
-  img {
+  &>img {
     visibility: hidden;
   }
 
@@ -50,7 +50,6 @@
       bottom: 0;
       border: 1px solid gray;
       background-color: white;
-      //animation: loading 1s infinite;
       transition: opacity 0.5s;
     }
 
