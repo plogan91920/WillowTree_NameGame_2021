@@ -16,6 +16,7 @@ const Setting = ({name, children}) => {
 
   function toggle () {
     cookies.set(name, !checked);
+    window.location.reload(false);
     setChecked(!checked);
   }
 

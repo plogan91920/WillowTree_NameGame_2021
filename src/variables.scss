@@ -6,15 +6,15 @@ $color-brand: #15659D;
 $color-light-background: white;
 $color-light-text: #223547;
 $color-light-primary: #15659D;
-$color-light-secondary: #2B4C68;
+$color-light-secondary: #223547;
 
 //Dark Theme Colors
-$color-dark-background: #223547;
+$color-dark-background: #1E1E1E;
 $color-dark-text: white;
 $color-dark-primary: #15659D;
-$color-dark-secondary: #2B4C68;
+$color-dark-secondary: #3C3C3C;
 
-:root {
+.App {
   --color-brand: #{$color-brand};
   --color-brand-dark: #{$color-brand-dark};
   --color-page-background: #{$color-light-background};
