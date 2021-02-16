@@ -1,8 +1,13 @@
+@import '../mixins.scss';
+
 .Button {
   display: block;
   margin: 25px auto;
   border-radius: 14px;
-  width: 359px;
+  width: 250px;
+  @include tablet-up {
+    width: 320px;
+  }
   padding: 17px;
   background-color: var(--color-primary);
   font-size: 17px;

@@ -1,20 +1,33 @@
+@import '../mixins.scss';
 .Page-Play {
   p {
-    margin: 16px;
+    margin: 5px;
+    
+    @include mobile-only {
+      display: none;
+    }
   }
   .Name {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
+    @include mobile-only {
+      margin: 8px auto;
+    }
   }
   .Portraits {
-    margin: 40px;
-    width: 1024px;
+    margin: 10px auto;
+    width: 95vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+
+    @include tablet-only {
+      width: 350px;
+    }
+    
+    @include laptop-only {
+      width: 630px;
+    }
   }
 }
 

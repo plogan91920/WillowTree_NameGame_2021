@@ -1,12 +1,24 @@
+@import '../mixins.scss';
 .EmployeePortrait {
   --result-fade-time: 0.5s;
 
   position: relative;
-  width: 260px;
-  height: 260px;
-  margin: 20px;
-  border-radius: 4px;
+  width: 35vw;
+  height: 35vw;
+  margin: 5px;
   overflow: hidden;
+
+  @include tablet-up {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  @include laptop-only {
+    width: 180px;
+    height: 180px;
+    margin: 15px;
+    border-radius: 4px;
+  }
 
   .Portrait {
     width: 100%;

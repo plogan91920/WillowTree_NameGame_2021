@@ -1,3 +1,10 @@
-.Page-NotFound svg {
-    font-size: 5em;
+.Page-NotFound {
+    position: absolute;
+    top:50%;
+    width: 100vw;
+    transform: translateY(-50%);
+
+    svg {
+        font-size: 5em;
+    }
 }

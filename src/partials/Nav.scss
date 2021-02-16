@@ -1,5 +1,10 @@
+@import '../mixins.scss';
 .Nav {
-  height: 104px;
+  height: 54px;
+
+  @include tablet-up {
+    height: 104px;
+  }
   
   nav {
     position: fixed;
@@ -11,8 +16,13 @@
   }
 
   .Logo {
-    height: 30px;
-    margin: 33px auto;
+    height: 16px;
+    margin: 16px auto;
+
+    @include tablet-up {
+      height: 30px;
+      margin: 35px auto;
+    }
   }
 
   button {
@@ -20,11 +30,15 @@
     border: none;
     display: block;
     position: absolute;
-    width: 104px;
+    width: 60px;
     height: 100%;
     font-size: 1.5em;
     line-height: 0;
     color: white;
+
+    @include tablet-up {
+      width: 104px;
+    }
     
     svg {
       transition: transform 0.2s;

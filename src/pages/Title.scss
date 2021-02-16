@@ -1,3 +1,4 @@
+@import '../mixins.scss';
 .Page-Title {
   position: absolute;
   left: 0;
@@ -12,6 +13,11 @@
   }
   
   p {
-    margin: 72px;
+    margin: 72px auto;
+    width: 216px;
+
+    @include tablet-up {
+      width:320px;
+    }
   }
 }

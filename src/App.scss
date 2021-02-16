@@ -1,12 +1,18 @@
 @import './variables.scss';
+@import './mixins.scss';
 
 body {
   position: relative;
   height: 100vh;
   width: 100vw;
 
-  font: 400 24px Helvetica;
-  line-height: 32px;
+  font: 400 17px Helvetica;
+  line-height: 22px;
+
+  @include tablet-up {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .App {
@@ -22,7 +28,12 @@ body {
 }
 
 .text-big {
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 34px;
+  line-height: 41px;
   font-weight: 700;
+
+  @include tablet-up {
+    font-size: 40px;
+    line-height: 48px;
+  }
 }

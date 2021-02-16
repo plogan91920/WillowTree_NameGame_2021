@@ -1,7 +1,16 @@
+@import '../mixins.scss';
+
 .Logo {
   position: relative;
-  max-width: 45vmin;
-  margin: 72px auto;
+  width: 350px;
+  max-width: 95vmin;
+  margin: 20px auto;
+
+  
+  @include tablet-up {
+    width: 462px;
+    margin: 60px auto;
+  }
 
   &:after {
     content: "";
