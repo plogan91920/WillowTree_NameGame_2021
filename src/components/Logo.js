@@ -1,10 +1,14 @@
+//Functional Includes
 import Particle from './Particle.js';
 
+//Resource Includes
 import bullseye from '../assets/images/bullseye.svg';
 import title from '../assets/images/title.svg';
-
 import './Logo.scss';
 
+// ==============
+// Logo Component
+// ==============
 const Logo = () => {
   return (
     <div className="Logo">

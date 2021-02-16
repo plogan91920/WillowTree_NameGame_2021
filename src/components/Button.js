@@ -1,22 +1,57 @@
-import { withRouter } from 'react-router'
+//Functional Includes
+import { createBrowserHistory } from "history";
+import PropTypes from 'prop-types'
 
+//Resource Includes
 import './Button.scss';
 
-const Button = withRouter(({text, secondary, disabled, onClick, history}) => {
-  if (typeof onClick == "string") {
-    console.log("Caught One")
-    console.log(history)
-    onClick = () => { console.log("go forth"); history.push(onClick) }
+const history = createBrowserHistory({forceRefresh: true});
+
+// ================
+// Button Component
+// ================
+const Button = ({text, secondary, disabled, action}) => {
+
+  //Handle passed route or function
+  var clickFunc
+  if (typeof action == "string") {
+    clickFunc = () => {
+      history.push(action) 
+    }
   }
+  else {
+    clickFunc = () => {
+      if (!disabled) 
+        action();
+    }
+  }
+
+  //Dynamic Styling
+  var classList = "Button"
+  if (secondary)
+    classList += " Secondary"
+  if (disabled)
+    classList += " Disabled"
+
+  //Render
   return (
-    <div className={"Button" + (secondary ? " Secondary" : "") + (disabled ? " Disabled" : "")} onClick={() => {if (!disabled) onClick()}}>
+    <div className={classList} onClick={clickFunc}>
       {text}
     </div>
   )
-})
+}
 
+//Prop Handling
 Button.defaultProps = {
-  onClick: () => {}
+  action: () => {}
+}
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  action: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func
+  ])
 }
 
 export default Button

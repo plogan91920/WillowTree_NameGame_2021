@@ -1,5 +1,9 @@
+//Functional Includes
 import Setting from "../components/Setting.js";
 
+// =============
+// Settings Page
+// =============
 function Settings() {
   return (
     <div className="Page-Settings">

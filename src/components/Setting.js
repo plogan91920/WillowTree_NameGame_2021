@@ -1,13 +1,16 @@
+//Functional Includes
 import { useState } from 'react';
 import Cookies from 'universal-cookie';
 
+//Resource Includes
 import { FaCheck } from 'react-icons/fa';
-
 import './Setting.scss';
 
-//cookies.set('darkMode', true);
 const cookies = new Cookies();
 
+// =================
+// Setting Component
+// =================
 const Setting = ({name, children}) => {
   const [checked, setChecked] = useState(cookies.get(name) == "true");
 
@@ -16,6 +19,7 @@ const Setting = ({name, children}) => {
     setChecked(!checked);
   }
 
+  //Render
   return (
     <div className="Setting" onClick={toggle}>
       <span className={"Checkbox" + (checked ? " Checked" : "")}><div className="Check"><FaCheck /></div></span>{children}

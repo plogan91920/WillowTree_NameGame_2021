@@ -1,17 +1,20 @@
-import {Link} from "react-router-dom";
-
+//Functional Includes
 import Button from "../components/Button.js";
 
+//Resource Includes
 import "./Menu.scss";
 
+// =========
+// Menu Page
+// =========
 function Menu() {
   return (
     <div className="Page-Menu">
       <div className="Menu">
-      <Link to="/play/practice"><Button text="Practice" /></Link>
-      <Link to="/play"><Button text="Exam" /></Link>
-      <Link to="/scores"><Button text="Scores" /></Link>
-      <Link to="/settings"><Button secondary text="Settings" /></Link>
+      <Button action="/play/practice" text="Practice" />
+      <Button action="/play" text="Exam" />
+      <Button action="/scores" text="Scores" />
+      <Button action="/settings" secondary text="Settings" />
       </div>
     </div>
   );

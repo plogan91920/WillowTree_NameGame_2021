@@ -1,7 +1,10 @@
+//Resource Includes
 import {FaExclamationTriangle} from 'react-icons/fa';
-
 import './NotFound.scss';
 
+// ========
+// 404 Page
+// ========
 function NotFound() {
   return (
     <div className="Page-NotFound">
