@@ -132,6 +132,16 @@ export class Play extends Component {
   render() {
     if (!this.state.complete) {
 
+      //Trim Name
+      let name
+      if (this.state.question.answer) {
+        let firstName = this.state.question.answer.firstName.match('([a-zA-Z\-." "`\']*)')[0];
+        let lastName = this.state.question.answer.lastName.match('([a-zA-Z\-." "`\']*)')[0];
+        name = firstName + " " + lastName;
+        name.replace("[' ']*", " ").trim();
+        console.log(name);
+      }
+
       // ==================
       // Render Game Screen
       // ==================
@@ -139,7 +149,7 @@ export class Play extends Component {
         <div className="Page-Play">
           <Prompt when={!this.practiceMode} message="Are you sure?" />
           <p>Which one of these good looking photos is the real</p>
-          <div className="Name text-big">{this.state.question.answer ? this.state.question.answer.firstName + " " + this.state.question.answer.lastName : ""}</div>
+          <div className="Name text-big">{name}</div>
           <div className="Portraits">
             {this.state.question.options.map((option) => (
               <EmployeePortrait result={option.answer} onClick={() => this.resolveAnswer(option.employee.id)} key={option.employee.id} image={option.employee.headshot.url}/>

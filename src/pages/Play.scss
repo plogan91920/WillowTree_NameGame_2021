@@ -10,6 +10,10 @@
     }
   }
 
+  @include mobile-only {
+    font-size: 28px;
+  }
+
   .Portraits {
     margin: auto;
     width: 95vw;
