@@ -28,7 +28,7 @@ function Scores() {
     scoreList = (
       <div className="Score-List">
         {scores.map((score, i) => (
-          <div key={i} className="Score">{i+1}. {score.correctAnswers} correct in {score.time} seconds</div>
+          <div key={i} className="Score">{i+1}. {score.correct} correct in {score.time} seconds</div>
         ))}
       </div>
     )
