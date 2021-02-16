@@ -1,6 +1,6 @@
 //Functional Includes
-import Button from '../components/Button.js';
-import Logo from '../components/Logo.js';
+import Button from '../components/Button.js'
+import Logo from '../components/Logo.js'
 
 //Resource Includes
 import './Title.scss';

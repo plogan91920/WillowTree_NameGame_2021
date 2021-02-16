@@ -1,0 +1,13 @@
+{
+  "app": {
+    "website_url": "https://namegame.willowtreeapps.com",
+    "api_endpoint": "/api/v1.0/profiles"
+  },
+  "game": {
+    "questions": 5,
+    "assist_mode": {
+      "start_delay": 10,
+      "reveal_delay": 3
+    }
+  }
+}

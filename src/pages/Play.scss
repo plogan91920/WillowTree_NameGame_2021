@@ -80,6 +80,10 @@
         transform: translateX(-50%);
         color: white;
         text-align: center;
+
+        @include laptop-up {
+          width: 300px
+        }
       }
     }
   }
