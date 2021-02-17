@@ -39,11 +39,15 @@ The design provided includes web designs at resolution 1440 x 1024 for several k
 
 ### Function
 
-
+The requirements state the data is to be pulled from the client's JSON API. Currently this occurs in /helpers/API for ease of maintenance, and the API endpoint itself is set in config.json. There is a "Start Game" button on a menu screen described but not pictured in the designs that takes you to the game as well as a "Home" button on the score screen that is designated to take you all the way to the splash screen again. The number of questions per game is stated to be 5 (also set in config.json).
 
 ## Maintenance
 
-Here are some brief thoughts on overall Maintenance. Most individual files should be fairly self documented, however there are a few additional relevant thoughts.
+Here are some brief thoughts on overall Maintenance. Most individual files should be fairly self documented, however there are a few additional relevant thoughts. Tests have been provided for the Play component, as well as one test for the Button component, though much more thorough testing could (and likely should) be implemented in the future.
+
+### CORS proxy
+
+The proxy for development is currently set to "https://namegame.willowtreeapps.com" for development.
 
 ### Config
 

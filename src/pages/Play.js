@@ -70,7 +70,6 @@ export class Play extends Component {
     this.employees = this.shuffleArray(this.employees)
     this.questions = []
 
-    //Group employees in
     for (var q = 0; q < Math.min(Math.floor(this.employees.length / 6), Settings.game.questions); q++) {
       //Get the next 6 employees, pick one as the answer
       var options = this.employees.slice(q*6,q*6 + 6)
@@ -158,10 +157,10 @@ export class Play extends Component {
   }
 
   sanitizeName(firstName, lastName) {
-    firstName = firstName.match('([a-zA-Z\-." "`\']*)')[0];
-    lastName = lastName.match('([a-zA-Z\-." "`\']*)')[0];
+    firstName = firstName.match(/([a-zA-Z\-." "`\']*)/)[0];
+    lastName = lastName.match(/([a-zA-Z\-." "`\']*)/)[0];
     let name = firstName + " " + lastName;
-    name.replace("[' ']*", " ").trim();
+    name = name.replace(/([' '][' ']*)/g," ").trim();
 
     return name
   }
@@ -177,7 +176,6 @@ export class Play extends Component {
     })
     averageTime /= Settings.game.questions
     averageTime = Math.floor(averageTime / 100) / 10
-    
     return [correctPercentage, incorrectPercentage, averageTime]
   }
 
@@ -244,8 +242,8 @@ export class Play extends Component {
         </div>
 
         <div className="Scoring">
-          {stats.map((stat) => (
-            <div className="Category">
+          {stats.map((stat, i) => (
+            <div key={i} className="Category">
               <div className="Value text-big">{stat.text}</div>
               <label>{stat.subtext}</label>
             </div>

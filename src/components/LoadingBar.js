@@ -1,6 +1,6 @@
 import './LoadingBar.scss'
 
-const LoadingBar = ({loading}) => {
+const LoadingBar = () => {
   return (
     <div className="LoadingBar" />
   )

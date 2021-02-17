@@ -9,7 +9,7 @@ export class API {
   // Employee Data
   // =============
   static fetchEmployees = async () => {
-    const res = await fetch(Settings.app.website_url + Settings.app.api_endpoint)
+    const res = await fetch(Settings.app.api_endpoint)
     const data = await res.json()
 
     return data
