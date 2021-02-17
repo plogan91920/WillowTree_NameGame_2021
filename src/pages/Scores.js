@@ -29,7 +29,7 @@ function Scores() {
       scoreList = (
         <div className="Score-List">
           {scores.map((score, i) => (
-            <div key={i} className="Score">{i+1}. {score.correct} correct in {score.time} seconds</div>
+            <div key={i} className="Score"><span>{i+1}.</span> {score.correct} correct in {score.time} seconds on average</div>
           ))}
         </div>
       )
