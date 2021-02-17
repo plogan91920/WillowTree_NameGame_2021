@@ -70,6 +70,7 @@ export class Play extends Component {
     this.employees = this.shuffleArray(this.employees)
     this.questions = []
 
+    //Pick # questions with 6 employees at a time to ensure they never duplicate in a session
     for (var q = 0; q < Math.min(Math.floor(this.employees.length / 6), Settings.game.questions); q++) {
       //Get the next 6 employees, pick one as the answer
       var options = this.employees.slice(q*6,q*6 + 6)
