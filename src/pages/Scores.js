@@ -25,13 +25,19 @@ function Scores() {
 
   let scoreList
   if (scores)
-    scoreList = (
-      <div className="Score-List">
-        {scores.map((score, i) => (
-          <div key={i} className="Score">{i+1}. {score.correct} correct in {score.time} seconds</div>
-        ))}
-      </div>
-    )
+    if (scores.length) {
+      scoreList = (
+        <div className="Score-List">
+          {scores.map((score, i) => (
+            <div key={i} className="Score">{i+1}. {score.correct} correct in {score.time} seconds</div>
+          ))}
+        </div>
+      )
+    } else {
+      scoreList = (
+        <div className="Score-List"><div className="big-text">No Recorded Scores</div></div>
+      )
+    }
   else
     scoreList = <LoadingBar />
   

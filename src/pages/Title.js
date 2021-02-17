@@ -5,10 +5,16 @@ import Logo from '../components/Logo.js'
 //Resources
 import './Title.scss';
 
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
+
 // ==========
 // Title Page
 // ==========
 function Title() {
+
+  cookies.set("high_scores", "")
+
   return (
     <div className="Page-Title">
       <Logo />
